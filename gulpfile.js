@@ -9,9 +9,14 @@ var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 var del = require('del');
 var runSequence = require('run-sequence');
-
+var babel = require('gulp-babel');
 
 gulp.task('default', function (callback) {
+  gulp.src('src/app.js')
+  .pipe(babel({
+      presets: ['@babel/env']
+  }))
+  .pipe(gulp.dest('dist'))
   runSequence(['sass','browserSync', 'watch'],
     callback
   )

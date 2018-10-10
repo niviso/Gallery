@@ -1,4 +1,7 @@
-import 'js/enviroment.js';
+import Enviroment from 'enviroment.js';
+
+let a = "hej";
+console.log(a);
 
 
 function getImages(){
@@ -12,6 +15,5 @@ function getImages(){
 
 }
 
-console.log(enviroment);
 
 getImages();
