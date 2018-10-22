@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i");
+html {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5em;
+  font-weight: lighter; }
+
+body {
+  background-color: #1a1a1a; }
+
+::-webkit-scrollbar {
+  display: none; }
+
+.info {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  color: white; }
+  .info iframe {
+    width: 32vw;
+    height: 18vw; }
+
+.wrapper {
+  width: 100vw;
+  height: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  overflow-x: none; }
+
+.innerWrapper {
+  color: white;
+  width: 100%;
+  height: 100%; }
+
+.image {
+  float: left;
+  width: 20vw;
+  height: 20vw;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: all 0.25s ease-in-out; }
+
+.text {
+  line-height: 1.2em;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1); }
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.pulse-animation {
+  -webkit-animation: pulseKeyframes 2s ease-in-out infinite;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: pulseKeyframes 2s ease-in-out infinite;
+  /* Firefox < 16 */
+  -ms-animation: pulseKeyframes 2s ease-in-out infinite;
+  /* Internet Explorer */
+  -o-animation: pulseKeyframes 2s ease-in-out infinite;
+  /* Opera < 12.1 */
+  animation: pulseKeyframes 2s ease-in-out infinite; }
+
+@keyframes pulseKeyframes {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+/* Firefox < 16 */
+@-moz-keyframes pulseKeyframes {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes pulseKeyframes {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+/* Internet Explorer */
+@-ms-keyframes pulseKeyframes {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+/* Opera < 12.1 */
+@-o-keyframes pulseKeyframes {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@media only all and (max-width: 1024px) {
+  .image {
+    float: left;
+    display: block;
+    width: 50vw;
+    height: 50vw; }
+    .image img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%; } }
+
+@media (hover: hover) {
+  .image img:hover {
+    width: 125%;
+    height: 125%; } }

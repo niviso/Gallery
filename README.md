@@ -1,5 +1,8 @@
-# Gallery
+# Awesome gallery
+With a basic gulp bundler + some babel
 
-**Setup**
+Please, click on the cats cause they will meow.
+
 - npm install
-- gulp watch
+- gulp watch (while developing)
+- gulp build (when done, use /dist)
